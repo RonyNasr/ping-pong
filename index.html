@@ -29,28 +29,69 @@
   </head>
 
   <body>
-    <div class="container">
+    <!-- <div class="container"> -->
       <div class="jumbotron">
         <header>
           <h1>Ping Pong</h1>
         </header>
+        <p class="lead">
+          A game of vision and mind.
+        </p>
       </div>
-      <div>
-      <h2>Please enter a number below to play Ping-Pong</h2>
+      <!-- end jumbotron -->
+      <div class="container">
+        <div class="row">
+          <div id="wrapper" class="col-md-2 left">
+            <div class="nav sidebar-nav">
+              <p>
+                <h3>About Ping Pong:</h3>
+              </p>
+              <p class="title">
+                <strong>Created by:</strong>
+              </p>
+              <p class="content">
+                Rony Nasr
+              </p>
+              <p class="title">
+                <strong>GitHub Username/URL:</strong>
+              </p>
+              <p class="content">
+                <a href="https://github.com/RonyNasr" class="side-link">RonyNasr</a>
+              </p>
+            </div>
+          </div>
+          <!-- end wrapper -->
 
-      <form id="input">
-        <div class="form-group">
-          <label for="number">Enter your number here:</label>
-          <input id="number" type="text">
-          <button type="submit" class="btn">Ping Pong!</button>
-        </div>
-      </form>
+          <!-- Page Content -->
+          <div id="page-content-wrapper">
+              <div class="col-md-8 col-md-push-right ">
+                <h2>Let's Play!</h2>
+                <p>
+                  <strong>Rules:</strong><br>
+                  Ping pong will count up to your number from 1 with the following exceptions:
+                </p>
+                <ol>
+                  <li>Numbers divisible by 3 become "ping"</li>
+                  <li>Numbers divisible by 5 become "pong"</li>
+                  <li>Numbers divisible by 3 and 5 become "pingpong"</li>
+                </ol>
 
-       <div id="output">
-         <ul id="result">
+                <form id="input">
+                  <div class="form-group">
+                    <label for="number">Enter your number here:</label>
+                    <input id="number" type="number">
+                    <button type="submit" class="btn">Ping Pong!</button>
+                  </div>
+                </form>
 
-         </ul>
-       </div>
-    </div> <!-- end container -->
+                <div id="output">
+                  <ul id="result">
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </div> <!-- end row -->
+      </div><!-- end container -->
   </body>
 </html>

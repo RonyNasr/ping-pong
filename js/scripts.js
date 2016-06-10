@@ -27,7 +27,11 @@ $(function () {
     var number = parseInt($("#number").val());
     console.log(number);
 
-    $("ul#result").append(pingPong(number));
-
+    $("ul#result").empty();
+    if (isNaN(number) || number <= 0) {
+      alert("Please enter a positive number!");
+    }else {
+      $("ul#result").append(pingPong(number));
+    }
   });
 });

@@ -1,1 +1,45 @@
-/*This file is for your custom css.  All yours*/
+.jumbotron {
+    text-align: center;
+    background-color: rgba(242, 230, 190,0.9);
+    position: fixed top;
+    width: 100%;
+}
+
+#wrapper{
+  background-color: rgba(0, 100, 0,0.5);
+  width: 220px;
+  min-height: 950px;
+  position: fixed;
+}
+
+#page-content-wrapper {
+  margin-left: 230px;
+  margin-right: auto;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+}
+
+p.title{
+  color: #F2E6BD;
+}
+
+p.content{
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+a.side-link{
+  color: white;
+}
+
+a.side-link:hover{
+  color: grey;
+}
+
+body{
+  background-color: lightgrey;
+}
