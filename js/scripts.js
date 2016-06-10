@@ -1,23 +1,21 @@
-//back end logic
+// //back end logic
 var pingPong = function (number) {
-  var result ="";
+  var results =[];
+
   for (var i=1;i<=number;i++){
-    console.log(i);
     if (i%3 !== 0 && i%5 !== 0){
-      result = result + "<li>" + i + "</li>";
+      results.push(i);
     }else {
-      result = result + "<li>"
       if(i%3 === 0){
-        result = result + "ping";
+        results.push("ping");
       }
       if(i%5 === 0){
-        result = result + "pong"
+        results.push("pong");
       }
-      result = result + "</li>"
     }
   }
-  console.log(result);
-  return result;
+  // console.log(results);
+  return results;
 }
 
 // Front end logic
@@ -25,13 +23,16 @@ $(function () {
   $("form#input").submit(function(event){
     event.preventDefault();
     var number = parseInt($("#number").val());
-    console.log(number);
 
     $("ul#result").empty();
     if (isNaN(number) || number <= 0) {
       alert("Please enter a positive number!");
     }else {
-      $("ul#result").append(pingPong(number));
+      var results = pingPong(number);
+
+      results.forEach(function (result) {
+         $("ul#result").append($("<li>").text(result));
+      });
     }
   });
 });
