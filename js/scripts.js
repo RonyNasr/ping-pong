@@ -12,6 +12,9 @@ var pingPong = function (number) {
       if(i%5 === 0){
         results.push("pong");
       }
+      if(i%15 ===0){
+        results.push("pingpong");
+      }
     }
   }
   // console.log(results);
